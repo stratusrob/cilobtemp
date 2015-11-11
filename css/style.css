@@ -1,0 +1,288 @@
+@charset 'utf-8';
+/* CSS DOCUMENT */
+html, body { font-size:14px; font-family:'opensans'; height:100%; min-height:100%;}
+.preloader { position:fixed; width:100%; height:100%; overflow:hidden; background:#fff url('../images/page_template/loading.gif') no-repeat center; z-index:999999; }
+.hide { position:relative;}
+.ease,a,input[type="submit"],button { -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; transition: all 0.5s ease; }
+.loader { position:relative; overflow:hidden; background:#fff url('../images/page_template/loading.gif') no-repeat center; }
+.auto { max-width:1202px; width:98%; margin: 0 auto; }
+.auto2 { max-width:936px; width:98%; margin: 0 auto; }
+
+h1, h2, h3, h4, h5, h6 { font-weight:normal; }
+/********* Page Template *********/
+#main-container { position:relative; height:100%; height: auto !important; min-height:100%; z-index:1; }
+input[type="text"],input[type="password"] { }
+input[type="submit"] { }
+textarea { outline:none; resize:none; }
+
+header {}
+
+#main-wrapper {}
+.fl { float:left; }
+.fr { float:right; }
+.clr { float:none; clear:both; }
+.bp-set { display:inline-block; *display:inline; }
+.bp-set.vm { vertical-align:middle; }
+.bp-set.vt { vertical-align:top; }
+.bp-set.vb { vertical-align:bottom; }
+.bp-rel { position:relative; }
+.bp-ab { position:absolute; }
+.bp-fixed { position:fixed; }
+.bp-center { text-align:center; }
+.bp-left { text-align:left; }
+.bp-right { text-align:right; }
+.bp-justify { text-align:justify; }
+.bp-tt { text-transform:uppercase; }
+.par p { padding:10px 0px; }
+.par2 p { padding:5px 0px; }
+.par-med { font-size:14px; }
+
+footer { position:relative; z-index:2; }
+
+.preloader { position:fixed; width:100%; height:100%; overflow:hidden; z-index:999999; background:#fff; }
+.spinner { position: absolute; width:80px; height:80px; top: 50%; left: 50%; margin-left:-40px; margin-top:-40px; animation: rotatee 2.0s infinite linear; -webkit-animation: rotatee 2.0s infinite linear; -moz-animation: rotatee 2.0s infinite linear; -ms-animation: rotatee 2.0s infinite linear; -o-animation: rotatee 2.0s infinite linear; }
+.s-dot { display: inline-block; position: absolute; width:60%; height:60%;  top: 0; background-color: #0a9fd8; border-radius: 100%; -webkit-border-radius: 100%; -moz-border-radius: 100%; -ms-border-radius: 100%; -o-border-radius: 100%;  animation: bouncee 2.0s infinite ease-in-out; -webkit-animation: bouncee 2.0s infinite ease-in-out; -moz-animation: bouncee 2.0s infinite ease-in-out; -ms-animation: bouncee 2.0s infinite ease-in-out; -o-animation: bouncee 2.0s infinite ease-in-out;  }
+.s-dot2 { top: auto; bottom: 0px; animation-delay: -1.0s; -webkit-animation-delay: -1.0s; -moz-animation-delay: -1.0s; -ms-animation-delay: -1.0s; -o-animation-delay: -1.0s; }
+@-webkit-keyframes rotatee { 100% { -webkit-transform: rotate(360deg) }}
+@keyframes rotatee { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg); } }
+@-webkit-keyframes bouncee { 0%, 100% { -webkit-transform: scale(0.0) } 50% { -webkit-transform: scale(1.0) } }
+@keyframes bouncee { 0%, 100% { transform: scale(0.0); -webkit-transform: scale(0.0); } 50% { transform: scale(1.0); -webkit-transform: scale(1.0); } }
+.lt-ie9 .preloader { background:#fff url('../images/page_template/loading.gif') no-repeat center; }
+.lt-ie9 .preloader .spinner { display:none; }
+/********* END Page Template *********/
+
+/** Font face **/
+@font-face {
+    font-family: 'opensans';
+    src: url('font/opensans-regular-webfont.eot');
+    src: url('font/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/opensans-regular-webfont.woff') format('woff'),
+         url('font/opensans-regular-webfont.ttf') format('truetype'),
+         url('font/opensans-regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'opensans';
+    src: url('font/opensans-semibold-webfont.eot');
+    src: url('font/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/opensans-semibold-webfont.woff') format('woff'),
+         url('font/opensans-semibold-webfont.ttf') format('truetype'),
+         url('font/opensans-semibold-webfont.svg#open_sanssemibold') format('svg');
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'opensans';
+    src: url('font/opensans-bold-webfont.eot');
+    src: url('font/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/opensans-bold-webfont.woff') format('woff'),
+         url('font/opensans-bold-webfont.ttf') format('truetype'),
+         url('font/opensans-bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+/** End Font **/
+.logo { width:291px; top:10px; left:50%; margin-left:-145px; }
+.home .logo { top:0px; }
+.header { width:100%; padding:10px 0; background:rgba(0,0,0,.4); text-align:center; z-index:999; }
+.top .auto  { position:relative; }
+.footer { text-transform:uppercase; padding:20px 10px; background:#b63300; color:#fff; }
+.reservation-btn a { display:inline-block; font-size:14px; padding:5px 30px; margin-top:18px; color:#fff; border:4px solid #fff; text-transform:uppercase;  }
+.nav { padding:28px 0; }
+.nav ul li { display:inline-block; padding-left:20px; } 
+.nav ul li a { display:block; color:#fff; } 
+.nav ul li a:hover { color:#b63300; } 
+.top { background:url('../images/home/top_bg.jpg') no-repeat center; background-size:cover; }
+
+.slider-main-container { top:0px; left:0; }
+.home-top-inner { padding:15% 0 19% 0; max-width:607px; width:100%; margin-right:4%; }
+.home-top-inner h1 { font-size:66px; font-family:'opensans'; font-weight:500; line-height:58px; color:#fff; text-shadow:3px 3px 6px rgba(0,0,0,.7); text-transform:uppercase; }
+.white-btn a { display:inline-block; font-size:14px; text-transform:uppercase; margin-top:15px; padding:7px 30px; border:3px solid #fff; color:#fff; }
+.home-bottom { min-height:733px; padding:40px 0; background:url('../images/home/bottom_bg.jpg') no-repeat center; background-size:cover; }
+.home-bottom .auto h2 { font-size:48px; font-family:'opensans'; max-width:698px; padding-bottom:60px; line-height:56px; margin:0 auto; text-transform:uppercase; text-shadow:3px 3px 3px rgba(0,0,0,.8); color:#fff; } 
+.food-list ul li { display:inline-block; vertical-align:top; width:359px; padding:19px; text-shadow: 2px 3px 2px rgba(0,0,0,.7); } 
+.food-list ul li h5 { font-size:30px; font-weight:bold; padding-top:5px; color:#fff; text-transform:uppercase; } 
+.food-list ul li h4 { font-size:27px; font-weight:500; padding-bottom:10px; line-height:35px; color:#fff; text-transform:uppercase; } 
+.food-list ul li p { font-size:16px; line-height:20px; color:#fff; }
+.sched { padding-top:30px; } 
+
+
+/** About Us **/
+.about { background:url('../images/about/bg.jpg') no-repeat; background-size:cover; } 
+.auto2 { padding:6% 0 5% 0; }
+.inner-holder { padding:5% 7%; font-size:15px; background:rgba(0,0,0,.7); color:#fff; }
+.inner-holder h1 { font-size:40px; font-weight:500; padding-bottom:20px; text-align:center; color:#fff; text-transform:uppercase; }
+.about-holder .inner-holder  p { padding-bottom:20px; }
+
+/** Event **/
+.event { background:url('../images/event/bg.jpg') no-repeat; background-size:cover; }
+.event-holder .inner-holder  p { padding-bottom:30px; }
+
+/** Facts **/
+.facts { background:url('../images/facts/bg.jpg') no-repeat; background-size:cover; }
+.inner-holder h3 { font-size:15px; font-weight:bold; color:#fff; }
+.event-holder .inner-holder  p { padding-bottom:20px; }
+
+/** Contact Us **/
+.inner-holder-1 { padding:5%; }
+.contact  { background:url('../images/contact/bg.jpg') no-repeat; background-size:cover; }
+.contact-holder .c-title { max-width:500px; width:auto; margin:0 auto; padding-bottom:30px; text-align:center; }
+.col-left { max-width:403px; width:48%; }
+.col-left input[type="text"] { width:393px; height:25px; padding:5px; background:#fff; border:none; }
+.col-left textarea { width:393px; height:158px; padding:5px; background:#fff; border:none; }
+.col-left ul li { margin-bottom:2px; }
+.white-btn input[type="submit"] { display:inline-block; font-size:14px; text-transform:uppercase; margin-top:15px; padding:7px 30px; border:3px solid #fff; color:#fff; background:none; }
+.map { width:100%; padding-top:40px; }
+.img img { width:100%; height:auto; }
+
+.col-right { max-width:460px; width:48%; }
+.col-right-top { min-height:310px; }
+.col-right-top ul li { padding-bottom:25px; } 
+.col-right-top ul li label { float:left; font-weight:500; width:156px; padding-right:10px; } 
+.col-right-top ul li p { float:left; width:218px; } 
+.col-right h2 { font-size:25px; font-weight:500; }
+.col-right h3 { font-size:15px; font-weight:500; padding-bottom:10px; }
+.col-right-1 { font-size:12px; padding-top:20px; }
+
+/** The Bar **/
+.thebar .inner-holder { padding:5% 4%; }
+.thebar { background:url('../images/thebar/bg.jpg') no-repeat; background-size:cover; }
+.bar-top { font-size:13px; max-width:765px; width:100%; margin:0 auto; text-align:center; }
+.bar-col { max-width:431px; width:49%; padding-top:4%; }
+.bar-holder .bar-col h3 { font-size:18px; font-weight:bold; padding-top:20px; padding-bottom:10px; }
+.bar-holder .bar-col h3 span { color:#ae3406; }
+.bar-col p { font-size:12px; line-height:21px; }
+.bar-col p strong { font-size:13px; font-weight:bold; }
+.bar-col p span,.bar-col h4 span { color:#a1330d; }
+.bar-col h4 { font-size:15px; font-weight:bold; }
+.bar-pic { width:100%; height:auto; }
+#container { position:relative; }
+.bar-grid { font-size:14px; margin-top:11%; text-align:center; font-style:italic; }
+.bar-grid p { padding-top:10px; }
+.bar-col.bar-right { width:52%; }
+
+/** Menu **/
+.menu { background:url('../images/contact/bg.jpg') no-repeat; background-size:cover; }
+.menu .inner-holder { padding:5% 4%; }
+.menu-col { font-size:13px; max-width:411px; width:49%; } 
+.menu-col h2 { font-size:20px; font-weight:bold; text-align:center; padding-top:30px; padding-bottom:5px; } 
+.menu-col ul li span { display:inline-block; vertical-align:middle; } 
+.dotted { margin:0 5px; border-top:2px dotted #fff; }
+.menu-col { padding-top:30px; }
+.menu-col > ul > li > p { font-size:12px; font-style:italic; padding:0 20px; text-align:center; }
+.menu-list { padding-top:20px; }
+.menu-list ul li { display:inline-block; font-size:12px; font-style:italic; width:31.5%; margin:0 .5%; margin-bottom:20px; vertical-align:top; text-align:center; }
+.menu-list ul li p { font-size:12px; padding-top:5px; }
+.menu-list ul li img { width:100%; height:auto; }
+
+/** Added **/
+.mobile-burger-menu { display:none; cursor:pointer; }
+
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+/* TABLET LANDSCAPE */
+@media only screen and (max-width: 1094px) {
+/* html { border-top:5px solid pink; } */
+.nav ul li { padding-left:15px; }
+.logo { width:240px; margin-left:-120px; }
+.logo img { width:100%; height:auto; }
+.home .logo { top:8px; }
+} 
+
+/* TABLET LANDSCAPE */
+@media only screen and (max-width: 1024px) {
+/* html { border-top:5px solid pink; } */
+.header .auto { width:100%; } 
+.nav { display:none; float:none; position:absolute; top:53px; width:100%; padding:0; background:rgba(65,64,64,.9); width:100%; z-index:9999; }
+.nav ul li { display:block; text-align:left; border-top:1px solid #888888; padding:0; }
+.nav ul li a { padding:10px; }
+.mobile-burger-menu { display:block; margin:3px 0; margin-right:10px; }
+.reservation-btn { margin-left:10px; } 
+.reservation-btn a { margin-top:0; } 
+.header { padding:16px 0; }
+.home .logo { top:-12px; }
+
+.logo { top:4px; }
+.inner-page .nav { top:69px; }
+
+.col-left textarea,.col-left input[type="text"] { max-width:393px; width:98%; }
+
+} 
+/* TABLET PORTRAIT */
+@media only screen and (max-width: 950px) {
+/* html { border-top:5px solid green; } */
+.food-list ul li { padding:15px; }
+.bar-col { width:47%; }
+#container .fl,#container .fr { width:47%; }
+.dotted { display:none !important; }
+.menu-col > ul > li  { padding:5px 0; border-bottom:2px dotted #fff; } 
+.menu-col > ul > li > p { padding:10px; }
+.menu-list ul li { width:31.5%; }
+} 
+/* TABLET PORTRAIT AND BIG MOBILE */
+@media only screen and (max-width: 810px) {
+/* html { border-top:5px solid red; } */
+.reservation-btn a { font-size:12px; padding:5px 16px; }
+.nav { top:52px; }
+.home-top-inner { float:none; width:95%; margin-right:0; }
+.home-bottom .auto h2 { font-size:38px; line-height:42px; }
+.food-list ul li { width:43%; }
+.food-pic { width:100%; }
+.food-pic img { width:100%; height:auto; }
+.food-list ul li h5 { font-size:25px; }
+.food-list ul li h4 { font-size:22px; line-height:27px; }
+.food-list ul li p { font-size:14px; line-height:17px; }
+.menu-list ul li p { font-size:10px; }
+
+}
+/* BIG MOBILE LANDSCAPE */
+@media only screen and (max-width: 640px) {
+/* html { border-top:5px solid blue; } */
+.header { padding:10px 0; }
+.home .logo { top:0; }
+.logo { position:relative; clear:both; margin:0 auto; left:auto; margin-bottom:10px; }
+.reservation-btn,.mobile-burger-menu  { display:inline-block; float:none; vertical-align:middle; margin:0 10px; }
+.nav { top:115px; }
+.inner-page .logo { top:0; }
+.inner-page .nav { top:125px; }
+
+.home-top-inner h1 { font-size:54px; line-height:52px; }
+.sched { padding-top:0; }
+.food-list ul li p { font-size:12px; }
+.home-bottom .auto h2 { font-size:30px; line-height:35px; }
+
+.col-left textarea, .col-left input[type="text"] { max-width:100%; }
+.col-left,.col-right { float:none; width:100%; max-width:100%; }
+.col-right-top { min-height:20px; padding-top:30px; }
+
+.menu-col { float:none; width:100%; max-width:100%; }
+}
+/* MOBILE LANDSCAPE */
+@media only screen and (max-width: 480px) {
+/* html { border-top:5px solid black; } */
+html, body { font-size:12px; }
+.home-top-inner h1 { font-size:39px; line-height:38px; }
+.white-btn a { font-size:12px; }
+.home-bottom .auto h2 { font-size:23px; line-height:30px; padding-bottom:10px; }
+.food-list ul li { width:96%; padding:4% 0; }
+
+.inner-holder h1 { font-size:30px; }
+.inner-holder { font-size:12px; }
+
+.col-left textarea, .col-left input[type="text"] { width:97%; }
+
+.bar-col { float:none; width:100%; }
+.bar-col.bar-right { width:100%; }
+
+}
+/* MOBILE PORTRAIT */
+@media only screen and (max-width: 320px) {
+/* html { border-top:5px solid orange; } */
+}
