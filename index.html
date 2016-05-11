@@ -2,27 +2,109 @@
 layout: default
 ---
 
-{% include header.html %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{{ site.name }}</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<div class="portfolio">
-    <h1>Web Design:</h1>
-    <ul>
-        {% for websites in site.data.websites %}
-        <li>
-            <a href="{{ websites.url }}">{{ websites.url }}</a>
-        </li>
-        {% endfor %}
-    </ul>
+<link rel="stylesheet" href="{{ site.github.url }}/css/normalize.css"/>
+<link rel="stylesheet" href="{{ site.github.url }}/css/style.css"/>
+<link rel="stylesheet" href="{{ site.github.url }}/css/superslide.css"/>
+<!--[if lt IE 9]> <script src="js/css3-mediaqueries.js"></script> <![endif]-->
+<script src="{{ site.github.url }}/js/html5.js"></script>
+<script src="{{ site.github.url }}/js/lib/modernizr-2.6.2.min.js"></script>
+
+</head>
+<body class="hide"> 
+<div class="preloader"><div class="spinner"><span class="s-dot s-dot1"></span><span class="s-dot s-dot2"></span></div></div>
+<div class="slider-main-container bp-fixed">
+    <div id="slides">
+        <div class="slides-container">
+          <img src="{{ site.github.url }}/images/home/slide_1.jpg" width="1439" height="627" alt="" title="">
+          <img src="{{ site.github.url }}/images/home/slide_2.jpg" width="1439" height="627" alt="" title="">
+        </div>
+    </div>
 </div>
+<section id="main-container">
+    <section id="main-wrapper">
+        <div class="home">
+            <div class="top bp-rel">
+                <div class="header">
+                    <div class="auto">
+                        <div class="logo bp-ab"><a href="/"><img src="{{ site.github.url }}/images/page_template/logo.png" width="291" height="74" alt="" title=""/></a></div>
+                        <div class="reservation-btn fl"><a href="/contact">Make a Reservation</a></div>
+                        <div class="mobile-burger-menu fr"><img src="{{ site.github.url }}/images/page_template/burger_menu.png" width="40" height="30" alt="" title=""/></div>
+                        <div class="nav fr">
+                            <ul>
+                                {% for item in site.data.navigation %}
+                                    <li>
+                                        <a href="{{ item.url }}">{{ item.title }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="clr"></div>
+                    </div>
+                </div>
 
 
-<div class="blog">
-    <h1>Blog Posts:</h1>
-    <ul>
-        {% for post in site.posts %}
-        <li>
-            <span class="date">{{ post.date | date: '%Y %b %d' }}</span> - <a href="{{ post.url }}">{{ post.title }}</a>
-        </li>
-        {% endfor %}
-    </ul>
-</div>
+<div class="auto">
+                    <div class="home-top-inner fr">
+                        <h1>open all year to serve you.</h1>
+                        <div class="white-btn"><a href="/menu">Find out more</a></div>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+            </div>
+            <div class="home-bottom">
+                <div class="auto bp-center">
+                    <h2>Great food, Great place & Great company.</h2>
+                    <div class="food-list bp-center">
+                        <ul>
+                            <li>
+                                <a href="/contact">
+                                    <div class="food-pic"><img src="images/home/pic1.jpg" width="359" height="194" alt="" title=""/></div>
+                                    <h5>OUR LOCATION</h5>
+                                </a>
+                            </li>
+                            <li>
+                                <h4>Welcome to City Island Lobster House</h4>
+                                <p>Nestled just off to the left of the City Island Bridge as you enter the Island the Lobster House offers much more than fabulous lobster dishes.  On those hot summer weekends when island traffic can discourage even seasoned veteran diners, just make that quick first left off the bridge on to Bridge Street one block down and we.ll be right here waiting  for ya!</p>
+                            </li>
+                            <li>
+                                <a href="/menu">
+                                    <div class="food-pic"><img src="images/home/pic2.jpg" width="359" height="194" alt="" title=""/></div>
+                                    <h5>OUR MENU</h5>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/events">
+                                    <div class="food-pic"><img src="images/home/pic3.jpg" width="359" height="194" alt="" title=""/></div>
+                                    <h5>OUR events</h5>
+                                </a>
+                            </li>
+                            <li>
+                                <h4 class="sched">We are open everyday from 11:30 am - 1:00 am 691 Bridge Street City Island. NY 10464</h4>
+                            </li>
+                            <li>
+                                <a href="/aboutus">
+                                    <div class="food-pic"><img src="images/home/pic4.jpg" width="359" height="194" alt="" title=""/></div>
+                                    <h5>OUR Service</h5>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+{% include footer.html %}

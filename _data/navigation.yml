@@ -1,14 +1,14 @@
-- title: home
-  url: /
+- title: Menu
+  url: /menu
 
-- title: about
-  url: /me
+- title: Events
+  url: /events
 
-- title: contact
-  url: mailto:micahcowell99@gmail.com
+- title: The Bar
+  url: /thebar
 
-- title: github
-  url: https://github.com/getmicah
+- title: Lobster Facts
+  url: /lobster_facts
 
-- title: twitter
-  url: https://twitter.com/getmicah
+- title: Contact
+  url: /contact
