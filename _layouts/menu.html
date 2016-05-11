@@ -2,11 +2,30 @@
 layout: default
 ---
 
-<div class="post">
-    <a class="post__back" href="/">&lt;-- back</a>
-    <h1 class="post__title">{{ page.title }}</h1>
-    <p class="post__date">{{ page.date | date: '%B %-d, %Y' }}</p>
-    <div class="post__content"?>
-        {{ content }}
-    </div>
-</div>
+{% include header.html %}
+<section id="main-container" class="menu">
+	<section id="main-wrapper">
+		<div class="inner-page">
+			<div class="header">
+				<div class="auto">
+					<div class="logo bp-ab"><a href="/"><img src="{{ site.github.url }}/images/page_template/logo.png" width="291" height="74" alt="" title=""/></a></div>
+					<div class="reservation-btn fl"><a href="/contact">Make a Reservation</a></div>
+					<div class="mobile-burger-menu fr"><img src="{{ site.github.url }}/images/page_template/burger_menu.png" width="40" height="30" alt="" title=""/></div>
+					<div class="nav fr">
+
+						{% include nav.html %}
+
+					</div>
+					<div class="clr"></div>
+				</div>
+			</div>
+<div class="bar-holder auto2">
+				<div class="inner-holder">
+					<h1>{{ page.title }}</h1>
+					<p class="bar-top">{{ menu.blurb }}</p>
+						<div class="menu-col fl">
+						<h2>{{ menu.section }}</h2>
+						<h3>{{ menu.subsection }}</h3>
+						<ul>
+							<li><span>{{ menu.entry }}</span><span class="dotted" style="width:56%"></span><span class="fr">{{ menu.entryprice }}</span><div class="clr"></div></li>
+						</ul>
