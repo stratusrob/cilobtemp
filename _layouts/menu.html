@@ -27,4 +27,8 @@ layout: default
 					</h1>
 					<p class="bar-top">{{ menu.blurb }}</p>
 						<div class="menu-col fl">
+              {% for food in site.data.menu %}
+                {% increment how_much_food %}
+              {% endfor %}
+              
               {{ content }}

@@ -4,6 +4,12 @@ layout: menu
 
 {% assign current_food_section = "zzz" %}
 {% for food in site.data.menu %}
+  {% increment how_much_food_shown %}
+  {% if how_much_food_shown < {{how_much_food | dividied_by:2}} %}
+    <div class="menu-col fl">
+  {% else %}
+    <div class="menu-col fr">
+  {% endif %}
   {% if current_food_section == food.Section %}
     <ul>
       <li><span>{{food.Entry}}</span><span class="dotted" style="width:50%"></span><span class="fr">{{food.Price}}</span><div class="clr"></div></li>
