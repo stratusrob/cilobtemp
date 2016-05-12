@@ -4,7 +4,6 @@ layout: menu
 
 {% assign current_food_section = "zzz" %}
 {% for food in site.data.menu %}
-{{current_food_section}}
   {% if current_food_section == food.Section %}
     <ul>
       <li><span>{{food.Entry}}</span><span class="dotted" style="width:50%"></span><span class="fr">{{food.Price}}</span><div class="clr"></div></li>
