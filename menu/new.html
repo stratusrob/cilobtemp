@@ -5,7 +5,7 @@ layout: menu
 {% assign current_food_section = "zzz" %}
 {% for food in site.data.menu %}
   {% increment how_much_food_shown %}
-  {% if how_much_food_shown < {{how_much_food | dividied_by:2}} %}
+  {% if how_much_food_shown < how_much_food | dividied_by:2 %}
     <div class="menu-col fl">
   {% else %}
     <div class="menu-col fr">
