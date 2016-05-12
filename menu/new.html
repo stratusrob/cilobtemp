@@ -2,6 +2,9 @@
 layout: menu
 ---
 
+{% for food in site.data.menu %}
+  {{ food.Section }} - {{ food.Sub-section }} - {{ food.Entry }} - {{ food.Price }}
+{% endfor %}
 						<h2>{{ menu.section }}</h2>
 						<h3>{{ menu.subsection }}</h3>
 						<ul>
