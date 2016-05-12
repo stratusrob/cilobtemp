@@ -2,7 +2,18 @@
 layout: menu
 ---
 
+{% assign current_food_section = "zzz" %}
 {% for food in site.data.menu %}
+  {% if current_food_section == food.Section %}
+    <ul>
+      <li><span>{{food.Entry}}</span><span class="dotted" style="width:50%"></span><span class="fr">{{food.Price}}</span><div class="clr"></div></li>
+    </ul>
+  {% else %}
+    <h2>{{food.Section}}</h2>
+      <ul>
+        <li><span>{{food.Entry}}</span><span class="dotted" style="width:50%"></span><span class="fr">{{food.Price}}</span><div class="clr"></div></li>
+      </ul>
+  {% endif %}
   {{ food.Section }} - {{ food.Sub-section }} - {{ food.Entry }} - {{ food.Price }}
 {% endfor %}
 						<h2>{{ menu.section }}</h2>
