@@ -8,5 +8,20 @@
 <script src="{{ site.github.url }}/js/plugins.js"></script>
 <script src="{{ site.github.url }}/js/custom.js"></script>
 <script src="{{ site.github.url }}/js/jquery.superslides.js"></script>
+<script src="{{ site.github.url }}/js/for-desktop.js"></script>
+<script>
+        (function () {
+            var NO_REDIRECT = 'noredirect'; // cookie to prevent redirect
+
+         	if (isMobile.any) {
+
+            	document.getElementById('mobile-reservation').innerHTML = '<a href="tel:7188851459">Make a Reservation</a>';
+
+            } else {
+
+            	document.getElementById('mobile-reservation').innerHTML = '<a href="#0" class="cd-popup-trigger">Make a Reservation</a>';
+            }
+        })();
+    </script>
 </body>
 </html>

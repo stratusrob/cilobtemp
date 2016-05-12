@@ -20,6 +20,7 @@ layout: default
 <!--[if lt IE 9]> <script src="js/css3-mediaqueries.js"></script> <![endif]-->
 <script src="{{ site.github.url }}/js/html5.js"></script>
 <script src="{{ site.github.url }}/js/lib/modernizr-2.6.2.min.js"></script>
+<script src="{{ site.github.url }}/js/for-mobile.js"></script>
 
 </head>
 <body class="hide"> 
@@ -39,7 +40,10 @@ layout: default
                 <div class="header">
                     <div class="auto">
                         <div class="logo bp-ab"><a href="/"><img src="{{ site.github.url }}/images/page_template/logo.png" width="291" height="74" alt="" title=""/></a></div>
-                        <div class="reservation-btn fl"><a href="/contact">Make a Reservation</a></div>
+                        <div class="reservation-btn fl" id="mobile-reservation"></div>
+
+                        {% include reserve-popup.html %}
+
                         <div class="mobile-burger-menu fr"><img src="{{ site.github.url }}/images/page_template/burger_menu.png" width="40" height="30" alt="" title=""/></div>
                         <div class="nav fr">
                             <ul>
@@ -55,7 +59,7 @@ layout: default
                 </div>
 
 
-<div class="auto">
+<div class="auto remove-desktop-pop">
                     <div class="home-top-inner fr">
                         <h1>open all year to serve you.</h1>
                         <div class="white-btn"><a href="/menu">Find out more</a></div>
