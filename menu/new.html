@@ -9,11 +9,13 @@ layout: menu
     <ul>
       <li><span>{{food.Entry}}</span><span class="dotted" style="width:50%"></span><span class="fr">{{food.Price}}</span><div class="clr"></div></li>
     </ul>
+    {% assign current_food_section = {{food.Section}} %}
   {% else %}
     <h2>{{food.Section}}</h2>
       <ul>
         <li><span>{{food.Entry}}</span><span class="dotted" style="width:50%"></span><span class="fr">{{food.Price}}</span><div class="clr"></div></li>
       </ul>
+      {% assign current_food_section = {{food.Section}} %}
   {% endif %}
   {{ food.Section }} - {{ food.Sub-section }} - {{ food.Entry }} - {{ food.Price }}
 {% endfor %}
