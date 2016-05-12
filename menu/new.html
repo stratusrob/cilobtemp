@@ -1,13 +1,14 @@
 ---
 layout: menu
 ---
-
+<div class="menu-col fl">
+{% assign half_the_food = how_much_food | divided_by:2 %}
+{{ half_the_food }}
 {% assign current_food_section = "zzz" %}
 {% for food in site.data.menu %}
   {% increment how_much_food_shown %}
-  {% if how_much_food_shown < how_much_food | dividied_by:2 %}
-    <div class="menu-col fl">
-  {% else %}
+  {% if how_much_food_shown == 100 %}
+    </div>
     <div class="menu-col fr">
   {% endif %}
   {% if current_food_section == food.Section %}
