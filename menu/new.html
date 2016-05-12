@@ -1,34 +1,30 @@
 ---
 layout: menu
 ---
+
 <div class="menu-col fl">
-{% assign half_the_food = how_much_food | divided_by:2 %}
-{{ half_the_food }}
-{% assign current_food_section = "zzz" %}
-{% for food in site.data.menu %}
-  {% increment how_much_food_shown %}
-  {% if how_much_food_shown == 100 %}
-    </div>
-    <div class="menu-col fr">
+  {% assign half_the_food = how_much_food | divided_by:2 %}
+    <div style="display:none;">{{ half_the_food }}</div>
+      {% assign current_food_section = "zzz" %}
+      {% for food in site.data.menu %}
+    <div style="display:none;">{% increment how_much_food_shown %}</div>
+      {% if how_much_food_shown == 86 %}
+</div>
+<div class="menu-col fr">
   {% endif %}
   {% if current_food_section == food.Section %}
     <ul>
-      <li><span>{{food.Entry}}</span><span class="dotted" style="width:50%"></span><span class="fr">{{food.Price}}</span><div class="clr"></div></li>
+      <li style="display: -webkit-flex; display: flex;"><span style="display:inline-block; padding-right:5px;">{{food.Entry}}</span><span class="dotted2"></span><span style="padding-left:5px;" class="fr">{{food.Price}}</span><div class="clr"></div></li>
+      <li><p>{{food.Blurb}}</p></li>
     </ul>
     {% assign current_food_section = {{food.Section}} %}
+    </ul>
   {% else %}
     <h2>{{food.Section}}</h2>
       <ul>
-        <li><span>{{food.Entry}}</span><span class="dotted" style="width:50%"></span><span class="fr">{{food.Price}}</span><div class="clr"></div></li>
+        <li style="display: -webkit-flex; display: flex;"><span style="display:inline-block; padding-right:5px;">{{food.Entry}}</span><span class="dotted2"></span><span style="padding-left:5px;" class="fr">{{food.Price}}</span><div class="clr"></div></li>
+        <li><p>{{food.Blurb}}</p></li>
       </ul>
       {% assign current_food_section = {{food.Section}} %}
   {% endif %}
-  
 {% endfor %}
-						<h2>{{ menu.section }}</h2>
-						<h3>{{ menu.subsection }}</h3>
-						<ul>
-							<li><span>{{ menu.entry }}</span><span class="dotted" style="width:56%"></span><span class="fr">{{ menu.entryprice }}</span><div class="clr"></div></li>
-						</ul>
-						
-						{{ food.Section }} - {{ food.Sub-section }} - {{ food.Entry }} - {{ food.Price }}

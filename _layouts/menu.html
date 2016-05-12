@@ -9,7 +9,10 @@ layout: default
 			<div class="header">
 				<div class="auto">
 					<div class="logo bp-ab"><a href="/"><img src="{{ site.github.url }}/images/page_template/logo.png" width="291" height="74" alt="" title=""/></a></div>
-					<div class="reservation-btn fl"><a href="/contact">Make a Reservation</a></div>
+					<div class="reservation-btn fl" id="mobile-reservation"></div>
+
+					{% include reserve-popup.html %}
+					
 					<div class="mobile-burger-menu fr"><img src="{{ site.github.url }}/images/page_template/burger_menu.png" width="40" height="30" alt="" title=""/></div>
 					<div class="nav fr">
 
@@ -21,19 +24,18 @@ layout: default
 			</div>
 <div class="bar-holder auto2">
 				<div class="inner-holder">
+					<h1>Menu</h1>
+				<!--
 					<h1>
 					  <a href="{{site.baseurl}}/menu/new.html" class="{% if page.url == '/new.html' %}current{% endif %}">Menu</a>
 					  <a href="{{site.baseurl}}/menu/bar.html" class="{% if page.url == '/bar' %}current{% endif %}">The Bar</a>
 					</h1>
-					<p class="bar-top">remember to put the menu blurb here.</p>
-						<!-- <div class="menu-col fl"> -->
-              {% for food in site.data.menu %}
-                {% increment how_much_food %}
-              {% endfor %}
-
+				-->
+				<p class="bar-top">Lunch at the Lobster House Restaurant is served Monday thru Saturday from 11:30am thru 3:00pm. Ordering from our regular menu is permitted during lunch hours. All lunch entrees’ are served with soup or salad. Choice of french fries, baked potato, rice or linguine, coffee or tea and complimentary dessert of the day.</p>
+					
               {{ content }}
 
-						</div>
+						
 					</div>
 					<div class="clr"></div>
 				</div>
