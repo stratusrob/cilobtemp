@@ -25,10 +25,11 @@ layout: default
 					  <a href="{{site.baseurl}}/menu/new.html" class="{% if page.url == '/new.html' %}current{% endif %}">Menu</a>
 					  <a href="{{site.baseurl}}/menu/bar.html" class="{% if page.url == '/bar' %}current{% endif %}">The Bar</a>
 					</h1>
-					<p class="bar-top">{{ menu.blurb }}</p>
+					<p class="bar-top">remember to put the menu blurb here.</p>
 						<div class="menu-col fl">
               {% for food in site.data.menu %}
                 {% increment how_much_food %}
               {% endfor %}
 
               {{ content }}
+              
