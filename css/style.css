@@ -424,3 +424,36 @@ html, body { font-size:12px; }
   color: transparent;
   white-space: nowrap;
 }
+
+#load {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: url(../images/ajax-loader.gif);
+  width: 43px;
+  height: 11px;
+  text-indent: -9999em;
+}
+
+#nav {
+  list-style: none;
+  
+}
+#nav li {
+  display: inline;
+}
+#nav li a {
+  
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+#nav li a:hover {
+  background: rgba(0,0,0,.4);
+}
+
+#nav li a.active {
+  background: rgba(0,0,0,.8);
+}
