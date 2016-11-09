@@ -457,3 +457,7 @@ html, body { font-size:12px; }
 #nav li a.active {
   background: rgba(0,0,0,.8);
 }
+
+.download-menu{
+  text-align: center;
+}
