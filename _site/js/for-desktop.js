@@ -1,6 +1,26 @@
 jQuery(document).ready(function($) {
 
-    console.log("hello");
+    $('.contact-popup-trigger').on('click', function(event) {
+        event.preventDefault();
+        $('.contact-popup').addClass('is-visible');
+        $('.remove-desktop-pop').hide();
+    });
+
+
+    $('.contact-popup').on('click', function(event) {
+        if ($(event.target).is('.contact-popup-close') || $(event.target).is('.contact-popup')) {
+            event.preventDefault();
+            $(this).removeClass('is-visible');
+            $('.remove-desktop-pop').show();
+        }
+    });
+
+    $(document).keyup(function(event) {
+        if (event.which == '27') {
+            $('.contact-popup').removeClass('is-visible');
+            $('.remove-desktop-pop').show();
+        }
+    });
 
     $('.cd-popup-trigger').on('click', function(event) {
         event.preventDefault();
@@ -23,25 +43,5 @@ jQuery(document).ready(function($) {
         }
     });
 
-    $('.contact-popup-trigger').on('click', function(event) {
-        event.preventDefault();
-        $('.contact-popup').addClass('is-visible');
-        $('.remove-desktop-pop').hide();
-    });
-
-
-    $('.contact-popup').on('click', function(event) {
-        if ($(event.target).is('.contact-popup-close') || $(event.target).is('.contact-popup')) {
-            event.preventDefault();
-            $(this).removeClass('is-visible');
-            $('.remove-desktop-pop').show();
-        }
-    });
-
-    $(document).keyup(function(event) {
-        if (event.which == '27') {
-            $('.contact-popup').removeClass('is-visible');
-            $('.remove-desktop-pop').show();
-        }
-    });
+    
 });
