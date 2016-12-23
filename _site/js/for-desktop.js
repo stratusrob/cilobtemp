@@ -6,7 +6,6 @@ jQuery(document).ready(function($) {
         $('.remove-desktop-pop').hide();
     });
 
-
     $('.cd-popup').on('click', function(event) {
         if ($(event.target).is('.cd-popup-close') || $(event.target).is('.cd-popup')) {
             event.preventDefault();
@@ -21,7 +20,6 @@ jQuery(document).ready(function($) {
             $('.remove-desktop-pop').show();
         }
     });
-
 
     $('.contact-popup-trigger').on('click', function(event) {
         event.preventDefault();
