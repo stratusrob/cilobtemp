@@ -1,5 +1,7 @@
 jQuery(document).ready(function($) {
 
+    console.log("hello");
+
     $('.cd-popup-trigger').on('click', function(event) {
         event.preventDefault();
         $('.cd-popup').addClass('is-visible');
