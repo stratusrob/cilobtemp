@@ -1,7 +1,12 @@
 <ul>
-							{% for item in site.data.navigation %}
-                                    <li>
-                                        <a href="{{ item.url }}">{{ item.title }}</a>
-                                    </li>
-                            {% endfor %}
+		{% for item in site.data.navigation %}
+                <li>
+                    <a href="{{ item.url }}">{{ item.title }}</a>
+                </li>
+        {% endfor %}
+        		<li>
+        			<a href="#0" class="contact-popup-trigger">Contact</a>
+        		</li>
+
 </ul>
+{% include contact-popup.html %}

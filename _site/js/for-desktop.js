@@ -21,4 +21,27 @@ jQuery(document).ready(function($) {
             $('.remove-desktop-pop').show();
         }
     });
+
+
+    $('.contact-popup-trigger').on('click', function(event) {
+        event.preventDefault();
+        $('.contact-popup').addClass('is-visible');
+        $('.remove-desktop-pop').hide();
+    });
+
+
+    $('.contact-popup').on('click', function(event) {
+        if ($(event.target).is('.contact-popup-close') || $(event.target).is('.contact-popup')) {
+            event.preventDefault();
+            $(this).removeClass('is-visible');
+            $('.remove-desktop-pop').show();
+        }
+    });
+
+    $(document).keyup(function(event) {
+        if (event.which == '27') {
+            $('.contact-popup').removeClass('is-visible');
+            $('.remove-desktop-pop').show();
+        }
+    });
 });
