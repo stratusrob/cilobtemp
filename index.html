@@ -47,13 +47,7 @@ layout: default
 
                         <div class="mobile-burger-menu fr"><img src="{{ site.github.url }}/images/page_template/burger_menu.png" width="40" height="30" alt="" title=""/></div>
                         <div class="nav fr">
-                            <ul>
-                                {% for item in site.data.navigation %}
-                                    <li>
-                                        <a href="{{ item.url }}">{{ item.title }}</a>
-                                    </li>
-                                {% endfor %}
-                            </ul>
+                            {% include nav.html %}
                         </div>
                         <div class="clr"></div>
                     </div>
