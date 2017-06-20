@@ -121,7 +121,7 @@ footer { position:relative; z-index:2; }
 .about-holder .inner-holder  p { padding-bottom:20px; }
 
 /** Event **/
-.event { background:url('../images/event/bg.jpg') no-repeat; background-size:cover; }
+.event { background:url('../images/bg.jpg') no-repeat; background-size:cover; }
 .event-holder .inner-holder  p { padding-bottom:30px; }
 
 /** Facts **/
