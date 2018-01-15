@@ -5,6 +5,9 @@ google_verification: null
 future: true
 encoding: UTF-8
 
+baseurl: "/cilobsterhouse" # the subpath of your site, e.g. /blog
+url: "/" # the base hostname & protocol for your site
+
 
 # File management
 include: [".htaccess"]
